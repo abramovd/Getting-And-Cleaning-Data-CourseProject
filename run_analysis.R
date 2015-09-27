@@ -40,6 +40,6 @@ clean <- meanstddata
 write.table(clean, "tidy_data.txt")
 
 clean2<-aggregate(. ~ Subject + Activity, clean, mean)
-clean2<-clean2[order(clean2$Subject,clean2$Id),]
+clean2<-clean2[order(clean2$Subject,clean2$Activity),]
 
 write.table(clean2, file = "tidy_data2.txt",row.name=FALSE)
